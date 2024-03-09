@@ -91,7 +91,7 @@ class ImageResizing:
                     output_dir = root.replace(self.input_dir, self.output_dir)
                     os.makedirs(output_dir, exist_ok=True)
                     output_path = os.path.join(output_dir, file)
-                    print(f"Processing Image : {input_path}")
+                    # print(f"Processing Image : {input_path}")
                     try:
                         resized_image = self.resizer_factory.resize(input_path, technique)
                         cv2.imwrite(output_path, resized_image)
